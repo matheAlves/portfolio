@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col lg:flex-row items-center justify-evenly p-24">
 
       <header
         className='text-center  mb-10'
@@ -11,22 +11,25 @@ export default function Home() {
           className='text-4xl mb-10 font-sans'>
           Matheus Alves
         </h1>
-        <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-          Web Developer.
+        <p className={`m-0 max-w-[30ch] text-base opacity-50`}>
+          Full Stack Developer.
         </p>
 
       </header>
+
 
       <Image
         className="relative"
         src="/m.png"
         alt="matheus"
         width={500}
-        height={37}
+        height={5}
         priority
       />
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-2 lg:text-left">
+
+
+      <div className="mb-32  text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left">
         <a
           href="https://github.com/matheAlves"
           className="group px-5 py-9 "
