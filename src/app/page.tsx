@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col lg:flex-row items-center justify-around p-24 bg-gray-200">
+    <main className="flex min-h-screen flex-col lg:flex-row items-center justify-around p-24  fade-in-from-left">
 
       <header
         className='text-center  mb-10'
