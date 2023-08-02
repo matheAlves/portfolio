@@ -54,5 +54,5 @@ body {
 }
 
 .fade-in-from-left-delayed {
-  animation: fadeInFromLeftDelayed 0.8s ease-out;
+  animation: fadeInFromLeftDelayed 0.9s ease-out;
 }
