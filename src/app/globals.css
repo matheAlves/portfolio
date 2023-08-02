@@ -39,5 +39,5 @@ body {
 }
 
 .fade-in-from-left {
-  animation: fadeInFromLeft 1.2s ease-out;
+  animation: fadeInFromLeft 1s ease-out;
 }
