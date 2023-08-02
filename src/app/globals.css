@@ -16,17 +16,6 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  /* background: #e2e8f0; */
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      #fff7ed
-      )
-      #ffffff
-}
-
 @keyframes fadeInFromLeft {
   from {
     opacity: 0;
@@ -47,6 +36,17 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background: #e2e8f0; */
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      #fff7ed
+      )
+      #ffffff
 }
 
 .fade-in-from-left {
