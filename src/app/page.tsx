@@ -67,7 +67,7 @@ export default function Home() {
 
 
       <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center`}>
-        em construção.
+        em construção. ©2023
       </p>
     </main>
   )
