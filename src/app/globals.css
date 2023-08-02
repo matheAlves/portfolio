@@ -18,13 +18,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #e2e8f0;
-  /* background: linear-gradient(
+  /* background: #e2e8f0; */
+  background: linear-gradient(
       to bottom,
       transparent,
-      #d1d5db
-    )
-    #e2e8f0; */
+      #cacccf
+      )
+      #ffffff
 }
 
 @keyframes fadeInFromLeft {
