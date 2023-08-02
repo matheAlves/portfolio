@@ -30,7 +30,7 @@ body {
 @keyframes fadeInFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-3.5%);
+    transform: translateX(-4%);
   }
   to {
     opacity: 1;
