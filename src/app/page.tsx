@@ -33,10 +33,10 @@ export default function Home() {
 
 
 
-        <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left underline decoration-wavy decoration-4 underline-offset-8 decoration-cyan-400 fade-in-from-left-delayed">
+        <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left fade-in-from-left-delayed">
           <a
             href="https://github.com/matheAlves"
-            className="group px-5 py-9 "
+            className="group px-5 py-9 hover:underline decoration-wavy decoration-4 underline-offset-8 decoration-lime-400"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -50,7 +50,7 @@ export default function Home() {
 
           <a
             href="https://www.linkedin.com/in/mathealves/"
-            className="group px-5 py-9"
+            className="group px-5 py-9 hover:underline decoration-solid decoration-4 underline-offset-8 decoration-cyan-400"
             target="_blank"
             rel="noopener noreferrer"
           >
