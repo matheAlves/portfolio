@@ -40,7 +40,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: #e2e8f0; */
   background: linear-gradient(
       to bottom,
       transparent,
