@@ -15,13 +15,14 @@ export default function Home() {
 
   gsap.to(".main-image", {
     x: -600,
-    // y: -500,
-    ease: "power4.in",
+    opacity: 0,
+    ease: "power4.inOut",
     scrollTrigger: {
+      markers: {startColor: "green", endColor: "red", fontSize: "12px"},
       trigger: ".main-image",
-      start: "center center",
+      start: "top center",
       // stop: "top top",
-      pin: true,
+      // pin: true,
       scrub: 1,
     },
   })
