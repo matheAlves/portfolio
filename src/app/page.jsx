@@ -13,29 +13,31 @@ export default function Home() {
   const lenis = useLenis(({ scroll }) => {
     console.log('hey')
   })
+
+  useEffect(() => {
+    gsap.to(".main-image", {
+      x: -600,
+      opacity: 0,
+      ease: "power4.inOut",
+      scrollTrigger: {
+        trigger: ".nav-bar",
+        start: "top top",
+        scrub: 2,
+      },
+    })
   
-  gsap.to(".main-image", {
-    x: -600,
-    opacity: 0,
-    ease: "power4.inOut",
-    scrollTrigger: {
-      trigger: ".nav-bar",
-      start: "top top",
-      scrub: 2,
-    },
-  })
+    gsap.to(".nav-bar", {
+      y: -400,
+      scrollTrigger: {
+        trigger: ".nav-bar",
+        start: "-1 top",
+        end: "+=2000",
+        scrub: 2,
+      },
+    })
 
-  gsap.to(".nav-bar", {
-    y: -400,
-    scrollTrigger: {
-      toggleClass: "sticky",
-      trigger: ".nav-bar",
-      start: "-1 top",
-      end: "+=2000",
-      scrub: 2,
-
-    },
   })
+  
 
   // useEffect(() => {
   //   window.scrollTo(0, 0)
@@ -57,7 +59,7 @@ export default function Home() {
         className='bg-blue-400'
         >
           <div
-            className='mg-80 nav-bar flex flex-col lg:flex-row items-center justify-around p-20 h-screen '>
+            className='mg-80 nav-bar flex flex-col lg:flex-row items-center justify-around p-20 h-screen sticky'>
             <div
               className='text-center mb-10 name'
             >
@@ -79,14 +81,14 @@ export default function Home() {
               priority
             />
 
-            <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left fade-in-from-left-delayed links">
+            <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left fade-in-from-left-delayed">
               <a
                 href="https://github.com/matheAlves"
                 className="group px-5 py-9 hover:underline decoration-wavy decoration-4 underline-offset-8 decoration-lime-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h2 className={`mb-3 text-2xl font-semibold`}>
+                <h2 className={`mb-3 text-2xl font-semibold links`}>
                   github{' '}
                   <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none fade-in-from-left-delayed">
                     -&gt;
@@ -115,14 +117,14 @@ export default function Home() {
           className='h-screen bg-purple-400'
         >
           <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center v-`}>
-            2
+            
           </p>
         </section>
         <section
           className='flex h-screen justify-center bg-emerald-400'
         >
           <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center v-`}>
-            3
+            
           </p>
         </section>
         <section
