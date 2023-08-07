@@ -15,33 +15,29 @@ export default function Home() {
   })
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     gsap.to(".main-image", {
       x: -600,
       opacity: 0,
-      ease: "power4.inOut",
+      ease: "power4.out",
       scrollTrigger: {
+        trigger: ".main-image",
+        start: "top top",
+        scrub: 2,
+      },
+    })
+
+    gsap.to(".nav-bar", {
+      y: -400,
+      scrollTrigger: {
+        // markers: true,
         trigger: ".nav-bar",
         start: "top top",
         scrub: 2,
       },
     })
-  
-    gsap.to(".nav-bar", {
-      y: -400,
-      scrollTrigger: {
-        trigger: ".nav-bar",
-        start: "-1 top",
-        end: "+=2000",
-        scrub: 2,
-      },
-    })
 
   })
-  
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // },)
 
   return (
     <ReactLenis
@@ -53,78 +49,76 @@ export default function Home() {
       }}
       root>
       <main
-        className='flex min-h-screen flex-col fade-in-from-left justify-center switch'
+        className='fade-in-from-left '
       >
         <section
-        className='bg-blue-400'
-        >
+          className='mg-80 nav-bar flex flex-col lg:flex-row items-center justify-around p-20 h-screen sticky'>
           <div
-            className='mg-80 nav-bar flex flex-col lg:flex-row items-center justify-around p-20 h-screen sticky'>
-            <div
-              className='text-center mb-10 name'
-            >
-              <h1
-                className='text-5xl mb-10 font-sans'>
-                Matheus Alves
-              </h1>
-              <p className={`m-0 max-w-[30ch] text-base opacity-50`}>
-                full stack developer.
-              </p>
-            </div>
-
-            <Image
-              className="main-image"
-              src="/m.png"
-              alt="matheus"
-              width={450}
-              height={0}
-              priority
-            />
-
-            <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left fade-in-from-left-delayed">
-              <a
-                href="https://github.com/matheAlves"
-                className="group px-5 py-9 hover:underline decoration-wavy decoration-4 underline-offset-8 decoration-lime-400"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h2 className={`mb-3 text-2xl font-semibold links`}>
-                  github{' '}
-                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none fade-in-from-left-delayed">
-                    -&gt;
-                  </span>
-                </h2>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/mathealves/"
-                className="group px-5 py-9 hover:underline decoration-solid decoration-4 underline-offset-8 decoration-cyan-400"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h2 className={`mb-3 text-2xl font-semibold`}>
-                  linkedin{' '}
-                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none fade-in-from-left-delayed">
-                    -&gt;
-                  </span>
-                </h2>
-              </a>
-            </div>
+            className='text-center mb-10 name'
+          >
+            <h1
+              className='text-5xl mb-10 font-sans'>
+              Matheus Alves
+            </h1>
+            <p className={`m-0 max-w-[30ch] text-base opacity-50`}>
+              full stack developer.
+            </p>
           </div>
+
+          <Image
+            className="main-image"
+            src="/m.png"
+            alt="matheus"
+            width={450}
+            height={0}
+            priority
+          />
+
+          <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left fade-in-from-left-delayed">
+            <a
+              href="https://github.com/matheAlves"
+              className="group px-5 py-9 hover:underline decoration-wavy decoration-4 underline-offset-8 decoration-lime-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className={`mb-3 text-2xl font-semibold links`}>
+                github{' '}
+                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none fade-in-from-left-delayed">
+                  -&gt;
+                </span>
+              </h2>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/mathealves/"
+              className="group px-5 py-9 hover:underline decoration-solid decoration-4 underline-offset-8 decoration-cyan-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className={`mb-3 text-2xl font-semibold`}>
+                linkedin{' '}
+                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none fade-in-from-left-delayed">
+                  -&gt;
+                </span>
+              </h2>
+            </a>
+          </div>
+        </section>
+        <section
+          className='h-screen bg-blue-400 '
+        >
         </section>
 
         <section
           className='h-screen bg-purple-400'
         >
-          <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center v-`}>
-            
-          </p>
+
         </section>
         <section
           className='flex h-screen justify-center bg-emerald-400'
         >
           <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center v-`}>
-            
+
           </p>
         </section>
         <section
