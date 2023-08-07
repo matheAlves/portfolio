@@ -120,7 +120,7 @@ export default function Home() {
           className='flex h-screen justify-center bg-emerald-300'
         >
           <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center v-`}>
-          "I want you to take out all your frustrations, with women, the system, with everything. Take it out on the puck. All on the puck." - Cherokee Jack
+          &ldquo;I want you to take out all your frustrations, with women, the system, with everything. Take it out on the puck. All on the puck.&rdquo; - Cherokee Jack
           </p>
         </section>
         <section
