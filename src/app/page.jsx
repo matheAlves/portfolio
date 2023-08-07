@@ -10,12 +10,14 @@ import { Flip } from 'gsap/Flip'
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger)
-  const lenis = useLenis(({ scroll }) => {
-    console.log('hey')
-  })
+
+  // const lenis = useLenis(({ scroll }) => {
+  //   console.log('hey')
+  // })
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    
     gsap.to(".main-image", {
       x: -600,
       opacity: 0,
@@ -77,7 +79,7 @@ export default function Home() {
           <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left fade-in-from-left-delayed">
             <a
               href="https://github.com/matheAlves"
-              className="group px-5 py-9 hover:underline decoration-wavy decoration-4 underline-offset-8 decoration-lime-400"
+              className="group px-5 py-9 hover:underline decoration-wavy decoration-4 underline-offset-8 decoration-lime-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -91,7 +93,7 @@ export default function Home() {
 
             <a
               href="https://www.linkedin.com/in/mathealves/"
-              className="group px-5 py-9 hover:underline decoration-solid decoration-4 underline-offset-8 decoration-cyan-400"
+              className="group px-5 py-9 hover:underline decoration-solid decoration-4 underline-offset-8 decoration-fuchsia-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -118,7 +120,7 @@ export default function Home() {
           className='flex h-screen justify-center bg-emerald-300'
         >
           <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center v-`}>
-
+          "I want you to take out all your frustrations, with women, the system, with everything. Take it out on the puck. All on the puck." - Cherokee Jack
           </p>
         </section>
         <section
