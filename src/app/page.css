@@ -1,0 +1,13 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-around;
+    /* height: 100; */
+    padding-top: 5;
+    margin-top: 0;
+}
+
+.footer {
+    align-self: end
+}
