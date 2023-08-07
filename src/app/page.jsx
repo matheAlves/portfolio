@@ -49,10 +49,10 @@ export default function Home() {
       }}
       root>
       <main
-        className='fade-in-from-left '
+        className='fade-in-from-left'
       >
         <section
-          className='mg-80 nav-bar flex flex-col lg:flex-row items-center justify-around p-20 h-screen sticky'>
+          className='mg-80 nav-bar flex flex-col lg:flex-row items-center justify-around p-20 h-screen sticky text-white'>
           <div
             className='text-center mb-10 name'
           >
@@ -105,7 +105,7 @@ export default function Home() {
           </div>
         </section>
         <section
-          className='h-screen bg-blue-400 '
+          className='h-screen bg-blue-300 '
         >
         </section>
 
@@ -115,14 +115,14 @@ export default function Home() {
 
         </section>
         <section
-          className='flex h-screen justify-center bg-emerald-400'
+          className='flex h-screen justify-center bg-emerald-300'
         >
           <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center v-`}>
 
           </p>
         </section>
         <section
-          className='flex h-screen justify-center bg-blue-400 content-end'
+          className='flex h-screen justify-center bg-sky-300 content-end'
         >
           <footer className={`m-0 max-w-[30ch] text-base opacity-50 self-center v- footer`}>
             em construção. © 2023
