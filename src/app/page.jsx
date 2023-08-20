@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    
+
     gsap.to(".main-image", {
       x: -600,
       opacity: 0,
@@ -38,6 +38,21 @@ export default function Home() {
         scrub: 2,
       },
     })
+
+    gsap.to(".text", {
+      x: 300,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".screen-2",
+        endTrigger: ".screen-3",
+        start: "center center",
+        end: "bottom top",
+        pin: ".screen-2",
+        pinSpacing: false,
+        scrub: true,
+      }
+    })
+
 
   })
 
@@ -106,22 +121,35 @@ export default function Home() {
             </a>
           </div>
         </section>
+
         <section
-          className='h-screen bg-blue-300 '
+          className='h-screen bg-blue-300'
         >
         </section>
 
         <section
-          className='h-screen bg-purple-400'
+          className='flex justify-center h-screen bg-purple-400 screen-2'
         >
+          <p className={`m-10 max-w-[30ch] text-base opacity-50 self-center v- text opacity-0 text-white`}>
+            &ldquo;I want you to take out all your frustrations, with women, the system, with everything. Take it out on the puck. All on the puck.&rdquo; - Cherokee Jack
+          </p>
 
         </section>
         <section
           className='flex h-screen justify-center bg-emerald-300'
         >
-          <p className={`m-0 max-w-[30ch] text-base opacity-50 self-center v-`}>
-          &ldquo;I want you to take out all your frustrations, with women, the system, with everything. Take it out on the puck. All on the puck.&rdquo; - Cherokee Jack
-          </p>
+        </section>
+        <section
+          className='flex h-screen justify-center bg-emerald-300 screen-3'
+        >
+        </section>
+        <section
+          className='flex h-screen justify-center bg-emerald-300'
+        >
+        </section>
+        <section
+          className='flex h-screen justify-center bg-emerald-300'
+        >
         </section>
         <section
           className='flex h-screen justify-center bg-sky-300 content-end'
