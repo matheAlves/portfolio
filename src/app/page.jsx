@@ -17,6 +17,27 @@ export default function Home() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    const keywords = document.querySelectorAll(".keyword")
+    keywords.forEach(el => {
+      // el.style.marginLeft = `${Math.floor(Math.random() * 5)}rem`
+      // el.style.marginTop = `${Math.floor(Math.random() * 5)}rem`
+      // el.style.marginBottom = `${Math.floor(Math.random() * 2)}rem`
+      return gsap.fromTo(el,
+        {
+          y: Math.floor(Math.random() * (1000 - 1000) + 1000),
+        },
+        {
+          y: Math.floor(Math.random() * (-1000 - -7000 + 1)) + -7000,
+          scrollTrigger: {
+            endTrigger: ".screen-4",
+            trigger: ".links",
+            start: "bottom center",
+            end: "top center",
+            scrub: true,
+          }
+        })
+
+    })
 
     gsap.to(".main-image", {
       x: -600,
@@ -32,28 +53,64 @@ export default function Home() {
     gsap.to(".nav-bar", {
       y: -400,
       scrollTrigger: {
-        // markers: true,
         trigger: ".nav-bar",
         start: "top top",
         scrub: 2,
       },
     })
 
-    gsap.to(".text", {
-      x: 300,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".screen-2",
-        endTrigger: ".screen-3",
-        start: "center center",
-        end: "bottom top",
-        pin: ".screen-2",
-        pinSpacing: false,
-        scrub: true,
-      }
-    })
+    gsap.to(".screen-4",
+      {
+        backgroundColor: "#7dd3fc",
+        scrollTrigger: {
+          trigger: ".screen-4",
+          start: "top top",
+          end: "bottom top",
+          pin: true,
+          scrub: true,
+        }
+      })
 
 
+    gsap.fromTo(".text",
+      { y: 1000 },
+      {
+        y: -1500,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".screen-2",
+          start: "center center",
+          pin: ".screen-2",
+          pinSpacing: false,
+          scrub: true,
+        }
+      })
+
+    gsap.fromTo(".text-2",
+      { y: 1000 },
+      {
+        y: -2000,
+        opacity: 1,
+        scrollTrigger: {
+          endTrigger: ".screen-3",
+          trigger: ".links",
+          start: "bottom center",
+          scrub: true,
+        }
+      })
+
+    gsap.fromTo(".text-3",
+      { y: 1000 },
+      {
+        y: -1000,
+        opacity: 0,
+        scrollTrigger: {
+          endTrigger: ".screen-3",
+          trigger: ".screen-2",
+          start: "center center",
+          scrub: true,
+        }
+      })
   })
 
   return (
@@ -69,7 +126,7 @@ export default function Home() {
         className='fade-in-from-left'
       >
         <section
-          className='mg-80 nav-bar flex flex-col lg:flex-row items-center justify-around p-20 h-screen sticky text-white'>
+          className='mg-80 nav-bar flex flex-col lg:flex-row items-center justify-around p-20 h-screen sticky text-white z-30'>
           <div
             className='text-center mb-10 name'
           >
@@ -91,7 +148,7 @@ export default function Home() {
             priority
           />
 
-          <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left fade-in-from-left-delayed">
+          <div className="mb-32 text-center lg:grid lg:mb-0 lg:grid-cols-2 lg:text-left fade-in-from-left-delayed links">
             <a
               href="https://github.com/matheAlves"
               className="group px-5 py-9 hover:underline decoration-wavy decoration-4 underline-offset-8 decoration-lime-300"
@@ -126,31 +183,96 @@ export default function Home() {
           className='h-screen bg-blue-300'
         >
         </section>
-
         <section
-          className='flex justify-center h-screen bg-purple-400 screen-2'
+          className='flex flex-wrap  justify-around h-screen bg-purple-400 screen-2  z-40'
         >
-          <p className={`m-10 max-w-[30ch] text-base opacity-50 self-center v- text opacity-0 text-white`}>
-            &ldquo;I want you to take out all your frustrations, with women, the system, with everything. Take it out on the puck. All on the puck.&rdquo; - Cherokee Jack
+          <p className={`  opacity-50  v-  text-white  keyword font-bold`} style={{ fontSize: '13rem' }} >
+            CSS &
+          </p>
+
+          <p className={`  opacity-50  v- text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Docker &
+          </p>
+
+          <p className={`  opacity-50  v- text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Express &
+          </p>
+
+          <p className={`  opacity-50  v-  text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Git &
+          </p>
+
+          <p className={`  opacity-50  v-  text-white font-bold keyword`} style={{ fontSize: '13rem' }} >
+            Javascript &
+          </p>
+
+          <p className={`  opacity-50  v- text-white  keyword`} style={{ fontSize: '13rem' }} >
+            SQL &
+          </p>
+
+          <p className={`  opacity-50  v-  text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Node &
+          </p>
+
+          <p className={`  opacity-50  v- text-white  keyword`} style={{ fontSize: '13rem' }} >
+            REST &
+          </p>
+
+          <p className={`  opacity-50  v-  text-white font-bold keyword`} style={{ fontSize: '13rem' }} >
+            React &
+          </p>
+
+          <p className={`  opacity-50  v- text-white font-bold keyword`} style={{ fontSize: '13rem' }} >
+            Web &
+          </p>
+
+          <p className={`  opacity-50  v-  text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Mobile &
+          </p>
+
+          <p className={`  opacity-50  v- text-white font-bold keyword`} style={{ fontSize: '13rem' }} >
+            Fullstack &
+          </p>
+
+          <p className={`  opacity-50  v- text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Agile &
+          </p>
+
+          <p className={`  opacity-50  v-  text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Python &
+          </p>
+
+          <p className={`  opacity-50  v- text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Tests &
+          </p>
+          <p className={`  opacity-50  v-  text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Typescript &
+          </p>
+
+          <p className={`  opacity-50  v- text-white  font-bold keyword`} style={{ fontSize: '13rem' }} >
+            APIs &
+          </p>
+
+          <p className={`  opacity-50  v- text-white  keyword`} style={{ fontSize: '13rem' }} >
+            Databases &
           </p>
 
         </section>
-        <section
-          className='flex h-screen justify-center bg-emerald-300'
-        >
-        </section>
+
         <section
           className='flex h-screen justify-center bg-emerald-300 screen-3'
         >
         </section>
+
         <section
-          className='flex h-screen justify-center bg-emerald-300'
+          className='flex h-screen justify-center bg-emerald-300 screen-4 z-20'
         >
         </section>
-        <section
-          className='flex h-screen justify-center bg-emerald-300'
+        {/* <section
+          className='flex h-screen justify-center bg-emerald-300 content-end '
         >
-        </section>
+        </section> */}
+
         <section
           className='flex h-screen justify-center bg-sky-300 content-end'
         >
